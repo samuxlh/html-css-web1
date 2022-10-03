@@ -14,13 +14,18 @@ nav {
   text-decoration: none;
   color: white;
   font-size: 24px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-.myHealthLogo{
-    font-size: 48px;
-    color:#419ed7;
+.myHealthLogo {
+  font-size: 48px;
+  color: #419ed7;
 }
 .blueButton {
   background-color: #419ed7;
+}
+.greenButton {
+  background-color: #37BD6D;
 }
 
 .blueText {
@@ -30,9 +35,9 @@ nav {
 .indexTitle {
   font-size: 64px;
   text-align: center;
-  margin: 20% auto;
+  margin: 20% auto 16px;
 }
 
-.logo{
-    display: flex;
+.logo {
+  display: flex;
 }
