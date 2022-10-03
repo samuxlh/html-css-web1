@@ -8,6 +8,10 @@ nav {
   padding: 0 1em;
 }
 
+body{
+  background-color: #add4d0;
+}
+
 .button {
   width: fit-content;
   padding: 9px 16px;
@@ -32,12 +36,13 @@ nav {
   color: #419ed7;
 }
 
-.indexTitle {
-  font-size: 64px;
-  text-align: center;
-  margin: 20% auto 16px;
-}
-
 .logo {
   display: flex;
+}
+
+.centralize {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
