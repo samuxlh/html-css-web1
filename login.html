@@ -2,25 +2,32 @@
 <head>
   <link rel="stylesheet" href="./src/styles/reset.css" />
   <link rel="stylesheet" href="./src/styles/styles.css" />
-  <title>Projeto Final 1 - Web</title>
+  <link rel="stylesheet" href="./src/styles/login.css" />
+  <title>Login - MyHealth</title>
   <meta charset="utf-8" />
 </head>
 <body>
   <nav>
     <div class="logo">
       <img src="src/img/icon-vaccine.png" width="48" />
-      <h1>My Health</h1>
+      <h1 class="myHealthLogo">My Health</h1>
     </div>
-    <div class="buttonArea">
-    </div>
+    <div class="buttonArea"></div>
   </nav>
   <main>
-    <form>
-        <label for="user">Nome:</label><br>
-        <input type="text" id="user" name="user"><br>
-        <label for="pw">Senha:</label><br>
-        <input type="password" id="pw" name="pw">
-      </form>
-    <br/><br/><a href="./homepage.html" class="button">Entrar</a>
+    <form class="centralize loginForm">
+      <div>
+        <label for="user">Email:</label>
+        <input type="email" id="user" name="user" />
+      </div>
+      <div>
+        <label for="pw">Senha:</label>
+        <input type="password" id="pw" name="pw" />
+      </div>
+    </form>
+    <span class="emailError">Email e/ou senha inválidos.</span>
+
+    <a href="./homepage.html" class="button centralize greenButton">Entrar</a>
+    <span class="recoveryLink">Esqueci minha senha.</span>
   </main>
 </body>

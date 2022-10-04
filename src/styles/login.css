@@ -1,0 +1,42 @@
+label,
+input {
+  font-size: 36px;
+  font-family: "Averia Libre";
+}
+
+.loginForm {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 23vh;
+}
+
+.loginForm > div {
+  margin: 1em 0;
+  width: 100%;
+}
+
+.emailError {
+  text-align: center;
+  display: block;
+  margin: 0 0 1em;
+  color: red;
+  display: none;
+}
+
+.recoveryLink {
+  text-align: center;
+  font-size: 24px;
+  color: #419ed7;
+  display: block;
+  text-decoration: underline;
+  margin: 15% 0 0 0;
+}
+
+input {
+  width: 500px;
+}
+
+.button {
+  width: 120px;
+}
