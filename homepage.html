@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
   <link rel="stylesheet" href="./src/styles/reset.css" />
   <link rel="stylesheet" href="./src/styles/styles.css" />
+  <link rel="stylesheet" href="./src/styles/homepage.css" />
   <title>Home - MyHealth</title>
   <meta charset="utf-8" />
 </head>
@@ -17,8 +22,24 @@
     </div>
   </nav>
   <main>
-    <h2>**Barra de Pesquisa**</h2>
-    <h3>**Lista de Vacinas**</h3>
-    <br /><br /><a href="./vaccine.html" class="button greenButton centralize">Nova vacina</a>
+    <div class="toolBar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="PESQUISAR VACINA..." />
+    </div>
+    <div class="vaccineList">
+      <div class="vaccineCard">
+        <h2>Astrazeneca</h2>
+        <p class="vaccineDose">1ª dose</p>
+        <p class="vaccineDate">31/12/2020</p>
+        <img
+          src="https://storage.googleapis.com/afs-prod/media/4a0663b017d14bf0bfd90638f3fffb86/3000.jpeg"
+          alt="Ampola de vacina para Covid-19 do tipo Astrazeneca"
+        />
+        <p class="vaccineNextDose">Próxima dose em: 21/12/2023</p>
+      </div>
+    </div>
+    <br /><br /><a href="./vaccine.html" class="button greenButton centralize"
+      >Nova vacina</a
+    >
   </main>
 </body>

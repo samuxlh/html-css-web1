@@ -1,0 +1,63 @@
+.toolBar {
+  width: 95%;
+  margin: 0.5em auto;
+  background-color: white;
+  padding: 0.5em 0.5em;
+  font-size: 24px;
+  display: flex;
+}
+
+.toolBar > i {
+  margin: 0.2em 0.5em 0 0.3em;
+}
+
+.toolBar > input {
+  border: none;
+  font-size: 24px;
+  font-family: "Averia Libre";
+  width: 100%;
+}
+
+.vaccineList {
+  display: grid;
+  padding: 2% 8%;
+}
+
+.vaccineCard {
+  width: 320px;
+  height: 350px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 1em;
+  text-align: center;
+}
+
+.vaccineCard > h2 {
+  font-size: 32px;
+  color: #3f92c5;
+  line-height: 1.3em;
+}
+
+.vaccineCard > img {
+  max-width: 90%;
+}
+
+.vaccineDose {
+    background-color: #3F92C5;
+    width: fit-content;
+    margin: auto;
+    color: white;
+    padding: 5px;
+}
+
+.vaccineDate {
+    color: #8B8B8B;
+    margin: .5em 0;
+}
+
+.vaccineNextDose{
+    color: #FD7979;
+    vertical-align: bottom;
+    text-align: right;
+    margin-top: 2em;
+}
