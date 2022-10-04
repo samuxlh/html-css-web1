@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <head>
+  <script>
+    function handleSubmit(){
+      const nome = document.getElementById('nome').value;
+      const masc = document.getElementById('masc').value;
+      const fem = document.getElementById('fem').value;
+      const nasc = document.getElementById('nasc').value;
+      const email = document.getElementById('email').value;
+      const pw = document.getElementById('pw').value;
+      // const user = {nome, masc, fem, nasc, email, pw};
+      // console.log(user)
+    }
+  </script>
   <link rel="stylesheet" href="./src/styles/reset.css" />
   <link rel="stylesheet" href="./src/styles/styles.css" />
   <link rel="stylesheet" href="./src/styles/register.css" />
@@ -15,10 +27,10 @@
     <div class="buttonArea"></div>
   </nav>
   <main>
-    <form class="registerForm">
+    <form class="registerForm" id="myForm">
       <div class="row">
-        <label for="user">Nome completo</label>
-        <input type="text" id="user" class="registerTextInput" />
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" class="registerTextInput" />
       </div>
       <div class="row">
         <label>Sexo</label>
@@ -26,7 +38,7 @@
           <input type="radio" id="masc" name="fav_language" value="Masculino" />
           <label for="masc">Masculino</label>
           <input type="radio" id="fem" name="fav_language" value="Feminino" />
-          <label for="css">Feminino</label>
+          <label for="fem">Feminino</label>
         </div>
       </div>
       <div class="row">
@@ -43,7 +55,7 @@
       </div>
     </form>
 
-    <a href="./homepage.html" class="button greenButton centralize"
+    <a class="button greenButton centralize" onclick="handleSubmit()"
       >Cadastrar</a
     >
   </main>
