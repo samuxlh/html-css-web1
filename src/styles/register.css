@@ -1,31 +1,50 @@
+* {
+  color: white;
+  font-family: "Averia Libre";
+}
+
 .registerForm {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10vh;
   width: 60%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .registerTextInput {
   height: 46px;
   font-size: 36px;
-  position: relative;
   right: 0;
+  color: #3f92c5;
 }
+
 
 label,
 input {
   font-size: 36px;
-  font-family: "Averia Libre";
+  display: block;
 }
 
 label {
-  text-align: end;
+  display: block;
 }
 
-.row {
+.column {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  margin: 0 1em;
+}
+
+.rightSideLabel {
+  text-align: start;
+}
+
+.leftSideLabel {
+  text-align: end;
+  display: inline;
 }

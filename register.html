@@ -28,29 +28,23 @@
   </nav>
   <main>
     <form class="registerForm" id="myForm">
-      <div class="row">
-        <label for="nome">Nome completo</label>
-        <input type="text" id="nome" class="registerTextInput" />
+      <div class="column">
+        <label for="nome" class="leftSideLabel" >Nome completo</label>
+        <label class="leftSideLabel">Sexo</label>
+        <label for="nasc" class="leftSideLabel">Data de nascimento</label>
+        <label for="email" class="leftSideLabel">Email</label>
+        <label for="pw" class="leftSideLabel">Senha</label>
       </div>
-      <div class="row">
-        <label>Sexo</label>
+      <div class="column">
+        <input type="text" id="nome" class="registerTextInput" />
         <div>
           <input type="radio" id="masc" name="fav_language" value="Masculino" />
-          <label for="masc">Masculino</label>
+          <label for="masc" class="registerTextInput rightSideLabel" >Masculino</label>
           <input type="radio" id="fem" name="fav_language" value="Feminino" />
-          <label for="fem">Feminino</label>
+          <label for="fem" class="registerTextInput rightSideLabel" >Feminino</label>
         </div>
-      </div>
-      <div class="row">
-        <label for="nasc">Data de nascimento</label>
         <input type="date" id="nasc" />
-      </div>
-      <div class="row">
-        <label for="email">Email</label>
         <input type="email" id="email" class="registerTextInput" />
-      </div>
-      <div class="row">
-        <label for="pw">Senha</label>
         <input type="password" id="pw" class="registerTextInput" />
       </div>
     </form>
