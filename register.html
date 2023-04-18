@@ -3,13 +3,19 @@
   <script>
     function handleSubmit(){
       const nome = document.getElementById('nome').value;
-      const masc = document.getElementById('masc').value;
-      const fem = document.getElementById('fem').value;
       const nasc = document.getElementById('nasc').value;
       const email = document.getElementById('email').value;
       const pw = document.getElementById('pw').value;
-      // const user = {nome, masc, fem, nasc, email, pw};
-      // console.log(user)
+      let genderOption;
+      const selectedOption = document.querySelector('input[name="genderInput"]:checked');
+      if (selectedOption) {
+        genderOption = (selectedOption.value);
+        console.log(genderOption);
+      } else {
+        console.log('Gênero não selecionado');
+      }
+    const user = {nome, nasc, email, pw, genderOption};
+    console.log(user)
     }
   </script>
   <link rel="stylesheet" href="./src/styles/reset.css" />
@@ -37,13 +43,13 @@
       </div>
       <div class="column">
         <input type="text" id="nome" class="registerTextInput" />
-        <div>
-          <input type="radio" id="masc" name="fav_language" value="Masculino" />
+        <div class="gender_selector">
+          <input type="radio" id="masc" name="genderInput" value="Masculino" />
           <label for="masc" class="registerTextInput rightSideLabel" >Masculino</label>
-          <input type="radio" id="fem" name="fav_language" value="Feminino" />
+          <input type="radio" id="fem" name="genderInput" value="Feminino" />
           <label for="fem" class="registerTextInput rightSideLabel" >Feminino</label>
         </div>
-        <input type="date" id="nasc" />
+        <input type="date" class="registerTextInput" id="nasc" />
         <input type="email" id="email" class="registerTextInput" />
         <input type="password" id="pw" class="registerTextInput" />
       </div>
