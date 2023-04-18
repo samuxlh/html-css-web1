@@ -10,7 +10,7 @@
   <nav>
     <div class="logo">
       <img src="src/img/icon-vaccine.png" width="48" />
-      <h1 class="myHealthLogo">My Health</h1>
+      <a href='./' class="clean"><h1 class="myHealthLogo">My Health</h1></a>
     </div>
     <div class="buttonArea"></div>
   </nav>
@@ -18,16 +18,16 @@
     <form class="centralize loginForm">
       <div>
         <label for="user">Email:</label>
-        <input type="email" id="user" name="user" />
+        <input type="email" id="user" name="user" class="blueText"/>
       </div>
       <div>
         <label for="pw">Senha:</label>
-        <input type="password" id="pw" name="pw" />
+        <input type="password" id="pw" name="pw" class="blueText"/>
       </div>
     </form>
     <span class="emailError">Email e/ou senha inválidos.</span>
 
     <a href="./homepage.html" class="button centralize greenButton">Entrar</a>
-    <span class="recoveryLink">Esqueci minha senha.</span>
+    <a href="./recovery.html"><span class="recoveryLink">Esqueci minha senha.</span></a>
   </main>
 </body>

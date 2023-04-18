@@ -54,3 +54,8 @@ label {
   display: flex;
   margin: 12px 0;
 }
+
+.clean{
+  all: unset;
+  cursor: pointer;
+}

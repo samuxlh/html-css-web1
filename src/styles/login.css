@@ -31,6 +31,7 @@ input {
   display: block;
   text-decoration: underline;
   margin: 15% 0 0 0;
+  cursor: pointer;
 }
 
 input {
@@ -39,4 +40,9 @@ input {
 
 .button {
   width: 120px;
+}
+
+.clean{
+  all: unset;
+  cursor:pointer;
 }
