@@ -1,0 +1,70 @@
+* {
+    color: white;
+    font-family: "Averia Libre";
+  }
+  
+  .registerForm {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    margin-bottom: 16px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .registerTextInput {
+    height: 46px;
+    font-size: 36px;
+    right: 0;
+    color: #3f92c5;
+    max-width: 400px;
+  }
+  
+  
+  label,
+  input {
+    font-size: 36px;
+    display: block;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 1em;
+  }
+  
+  .rightSideLabel {
+    text-align: start;
+  }
+  
+  .leftSideLabel {
+    text-align: end;
+    display: inline;
+  }
+  
+  .vaccineSelector{
+    display: flex;
+    margin: 12px 0;
+  }
+  
+  .clean{
+    all: unset;
+    cursor: pointer;
+  }
+
+  .reduce{
+    width: 30%;
+  }
+
+  .formatRightSide{
+    width: 60%;
+  }
