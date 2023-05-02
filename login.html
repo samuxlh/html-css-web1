@@ -4,6 +4,33 @@
   <link rel="stylesheet" href="./src/styles/styles.css" />
   <link rel="stylesheet" href="./src/styles/login.css" />
   <title>Login - MyHealth</title>
+  <script>
+    function checkLogin(){
+      const u = localStorage.getItem('u')
+      const p = localStorage.getItem('pw')
+
+      if (p){
+        localStorage.setItem('l', true)
+        const currentAdress = window.location.href
+        let mySplitStr = currentAdress.split('/')
+        mySplitStr[3] = "homepage.html"
+        console.log(mySplitStr)
+        const adrss = mySplitStr.join("/");
+        window.location.replace(adrss)
+      }
+    }
+    checkLogin()
+    function handleSubmit(e) {
+      const user = document.getElementById("user").value;
+      const pw = document.getElementById("pw").value;
+      console.log(user)
+      console.log(pw)
+      localStorage.setItem('u', user)
+      localStorage.setItem('pw', pw)
+      localStorage.setItem('l', true)
+    }
+
+    </script>
   <meta charset="utf-8" />
 </head>
 <body>
@@ -15,7 +42,7 @@
     <div class="buttonArea"></div>
   </nav>
   <main>
-    <form class="centralize loginForm">
+    <form class="centralize loginForm" id="login">
       <div>
         <label for="user">Email:</label>
         <input type="email" id="user" name="user" class="blueText"/>
@@ -27,7 +54,7 @@
     </form>
     <span class="emailError">Email e/ou senha inválidos.</span>
 
-    <a href="./homepage.html" class="button centralize greenButton">Entrar</a>
+    <input type="submit" href="./homepage.html" class="button centralize greenButton" onclick="handleSubmit()"></input>
     <a href="./recovery.html"><span class="recoveryLink">Esqueci minha senha.</span></a>
   </main>
 </body>
