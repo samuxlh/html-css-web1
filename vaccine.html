@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
   <link rel="stylesheet" href="./src/styles/reset.css" />
   <link rel="stylesheet" href="./src/styles/styles.css" />
@@ -10,7 +11,9 @@
       console.log("rodou");
       const modalBg = document.getElementById("popupBg");
       const popup = document.getElementById("popupModal");
+      const excluirVacina = document.getElementById("excluirVacina");
       if (show == true) {
+        excluirVacina.style.display = "none"
         modalBg.style.display = "block";
         modalBg.style.width = "100vw";
         modalBg.style.height = "100vh";
@@ -20,20 +23,34 @@
       } else {
         modalBg.style.display = "none";
         popup.style.display = "none";
+        excluirVacina.style.display = "block"
       }
     }
 
-    function excluir(){
+    function excluir() {
       alert('deve excluir a vacina atual')
       const currentAdress = window.location.href;
-            let mySplitStr = currentAdress.split("/");
-            mySplitStr[3] = "homepage.html";
-            console.log(mySplitStr);
-            const adrss = mySplitStr.join("/");
-            window.location.replace(adrss);
+      let mySplitStr = currentAdress.split("/");
+      mySplitStr[3] = "homepage.html";
+      console.log(mySplitStr);
+      const adrss = mySplitStr.join("/");
+      window.location.replace(adrss);
+    }
+
+    function handleVaccineCard() {
+      const form = document.forms;
+      console.log(form)
+      // elementFromHTML(html)
+    }
+
+    function elementFromHTML(html) {
+      const vaccineCard = document.createElement('div');
+      template.innerHTML = html.trim();
+      return template.content.firstElementChild;
     }
   </script>
 </head>
+
 <body>
   <nav>
     <div class="logo">
@@ -46,28 +63,25 @@
     </div>
   </nav>
   <main>
+    <span onclick="modal(true)" class="button redButton alignRight" id="excluirVacina">Excluir Vacina</span>
     <div id="popupModal">
       <div class="popupInside">
         <span class="popupTitle">Tem certeza que deseja remover essa vacina?</span>
         <div class="buttons">
-            <button onclick="excluir()" class="button redButton">Sim</button>
-            <button onclick="modal(false)" class="button greenButton">
-                Cancelar
-            </button>
+          <button onclick="excluir()" class="button redButton">Sim</button>
+          <button onclick="modal(false)" class="button greenButton">
+            Cancelar
+          </button>
         </div>
-    </div>
+      </div>
     </div>
     <div id="popupBg"></div>
     <form class="registerForm" id="myForm">
       <div class="column reduce">
-        <label for="dataVacinacao" class="leftSideLabel"
-          >Data de vacinação</label
-        >
+        <label for="dataVacinacao" class="leftSideLabel">Data de vacinação</label>
         <label for="vacina" class="leftSideLabel">Vacina</label>
         <label class="leftSideLabel">Dose</label>
-        <label for="comprovante" class="leftSideLabel"
-          >Comprovante da vacina</label
-        >
+        <label for="comprovante" class="leftSideLabel">Comprovante da vacina</label>
         <label for="dataProxima" class="leftSideLabel">Próxima vacinação</label>
       </div>
 
@@ -75,59 +89,21 @@
         <input type="date" class="registerTextInput" id="dataVacinacao" />
         <input type="text" id="vacina" class="registerTextInput" />
         <div class="vaccineSelector">
-          <input
-            type="radio"
-            id="primeiraDose"
-            name="vaccineInput"
-            value="primeira"
-          />
-          <label for="primeiraDose" class="registerTextInput rightSideLabel"
-            >1ª dose</label
-          >
-          <input
-            type="radio"
-            id="segundaDose"
-            name="vaccineInput"
-            value="segunda"
-          />
-          <label for="segundaDose" class="registerTextInput rightSideLabel"
-            >2ª dose</label
-          >
-          <input
-            type="radio"
-            id="terceiraDose"
-            name="vaccineInput"
-            value="terceira"
-          />
-          <label for="terceiraDose" class="registerTextInput rightSideLabel"
-            >3ª dose</label
-          >
-          <input
-            type="radio"
-            id="reforço"
-            name="vaccineInput"
-            value="reforço"
-          />
-          <label for="reforço" class="registerTextInput rightSideLabel"
-            >Reforço</label
-          >
-          <input
-            type="radio"
-            id="unica"
-            name="vaccineInput"
-            value="dose única"
-          />
-          <label for="unica" class="registerTextInput rightSideLabel"
-            >Dose Única</label
-          >
+          <input type="radio" id="primeiraDose" name="vaccineInput" value="primeira" />
+          <label for="primeiraDose" class="registerTextInput rightSideLabel">1ª dose</label>
+          <input type="radio" id="segundaDose" name="vaccineInput" value="segunda" />
+          <label for="segundaDose" class="registerTextInput rightSideLabel">2ª dose</label>
+          <input type="radio" id="terceiraDose" name="vaccineInput" value="terceira" />
+          <label for="terceiraDose" class="registerTextInput rightSideLabel">3ª dose</label>
+          <input type="radio" id="reforço" name="vaccineInput" value="reforço" />
+          <label for="reforço" class="registerTextInput rightSideLabel">Reforço</label>
+          <input type="radio" id="unica" name="vaccineInput" value="dose única" />
+          <label for="unica" class="registerTextInput rightSideLabel">Dose Única</label>
         </div>
         <input type="image" id="comprovante" class="registerTextInput" />
         <input type="date" id="dataProxima" class="registerTextInput" />
       </div>
     </form>
-    <a href="./" class="button greenButton centralize">Cadastrar</a>
-    <span onclick="modal(true)" class="button redButton centralize"
-      >Excluir Vacina</span
-    >
+    <a onclick="handleVaccineCard()" class="button greenButton centralize">Salvar Alterações</a>
   </main>
 </body>

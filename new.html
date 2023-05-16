@@ -31,6 +31,18 @@
             const adrss = mySplitStr.join("/");
             window.location.replace(adrss);
         }
+
+        function handleVaccineCard() {
+            const form = document.forms;
+            console.log(form)
+            // elementFromHTML(html)
+        }
+
+        function elementFromHTML(html) {
+            const vaccineCard = document.createElement('div');
+            template.innerHTML = html.trim();
+            return template.content.firstElementChild;
+        }
     </script>
 </head>
 
@@ -86,7 +98,7 @@
                 <input type="date" id="dataProxima" class="registerTextInput" />
             </div>
         </form>
-        <a href="./" class="button greenButton centralize">Cadastrar</a>
+        <a onclick="handleVaccineCard()" class="button greenButton centralize">Cadastrar</a>
         <span onclick="modal(true)" class="button redButton centralize">
             Cancelar Vacina
         </span>
