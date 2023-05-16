@@ -11,7 +11,9 @@
             console.log("rodou");
             const modalBg = document.getElementById("popupBg");
             const popup = document.getElementById("popupModal");
+            const excluirVacina = document.getElementById("cancelarVacina");
             if (show == true) {
+                excluirVacina.style.display = "none"
                 modalBg.style.display = "block";
                 modalBg.style.width = "100vw";
                 modalBg.style.height = "100vh";
@@ -21,6 +23,7 @@
             } else {
                 modalBg.style.display = "none";
                 popup.style.display = "none";
+                excluirVacina.style.display = "block"
             }
         }
         function cancelar() {
@@ -58,6 +61,9 @@
         </div>
     </nav>
     <main>
+        <span onclick="modal(true)" class="button redButton alignRight" id="cancelarVacina">
+            Cancelar Vacina
+        </span>
         <div id="popupModal">
             <div class="popupInside">
                 <span class="popupTitle">Deseja cancelar a inserção dessa vacina?</span>
@@ -99,8 +105,5 @@
             </div>
         </form>
         <a onclick="handleVaccineCard()" class="button greenButton centralize">Cadastrar</a>
-        <span onclick="modal(true)" class="button redButton centralize">
-            Cancelar Vacina
-        </span>
     </main>
 </body>
