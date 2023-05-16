@@ -30,7 +30,7 @@ input {
   color: #419ed7;
   display: block;
   text-decoration: underline;
-  margin: 15% 0 0 0;
+  margin: 1em 0 1em 0;
   cursor: pointer;
 }
 

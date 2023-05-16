@@ -28,6 +28,7 @@
       localStorage.setItem('u', user)
       localStorage.setItem('pw', pw)
       localStorage.setItem('l', true)
+      location.reload();
     }
 
     </script>
@@ -51,10 +52,10 @@
         <label for="pw">Senha:</label>
         <input type="password" id="pw" name="pw" class="blueText"/>
       </div>
+      <span class="emailError">Email e/ou senha inválidos.</span>
+      <a href="./recovery.html"><span class="recoveryLink">Esqueci minha senha.</span></a>
+      <input type="submit" href="./homepage.html" class="button centralize greenButton" onclick="handleSubmit()"></input>
     </form>
-    <span class="emailError">Email e/ou senha inválidos.</span>
 
-    <input type="submit" href="./homepage.html" class="button centralize greenButton" onclick="handleSubmit()"></input>
-    <a href="./recovery.html"><span class="recoveryLink">Esqueci minha senha.</span></a>
   </main>
 </body>

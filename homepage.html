@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="./src/styles/reset.css" />
   <link rel="stylesheet" href="./src/styles/styles.css" />
   <link rel="stylesheet" href="./src/styles/homepage.css" />
+  <script>
+    function logout(){
+    localStorage.removeItem('pw');
+    localStorage.removeItem('u');
+    localStorage.removeItem('l');
+    location.reload();
+  }
+  </script>
   <title>Home - MyHealth</title>
   <meta charset="utf-8" />
 </head>
@@ -18,7 +26,7 @@
     </div>
     <div class="buttonArea">
       <a href="./homepage.html" class="button blueButton">Minhas Vacinas</a>
-      <a href="./" class="button blueButton">Sair</a>
+      <a href="./" class="button blueButton" onclick="logout()">Sair</a>
     </div>
   </nav>
   <main>
