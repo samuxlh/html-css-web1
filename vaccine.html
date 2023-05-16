@@ -5,6 +5,24 @@
   <link rel="stylesheet" href="./src/styles/vaccine.css" />
   <title>Cadastrar nova vacina</title>
   <meta charset="utf-8" />
+  <script>
+    function modal(show) {
+      console.log("rodou");
+      const modalBg = document.getElementById("popupBg");
+      const popup = document.getElementById("popupModal");
+      if (show == true) {
+        modalBg.style.display = "block";
+        modalBg.style.width = "100vw";
+        modalBg.style.height = "100vh";
+        popup.style.display = "block";
+        popup.style.width = "500px";
+        popup.style.height = "300px";
+      } else {
+        modalBg.style.display = "none";
+        popup.style.display = "none";
+      }
+    }
+  </script>
 </head>
 <body>
   <nav>
@@ -18,12 +36,23 @@
     </div>
   </nav>
   <main>
+    <div id="popupModal">
+      <div class="popupInside">
+        <button onclick="modal(false)">Fechar modal</button>
+        <h1>Deseja mesmo excluir essa vacina?</h1>
+      </div>
+    </div>
+    <div id="popupBg"></div>
     <form class="registerForm" id="myForm">
       <div class="column reduce">
-        <label for="dataVacinacao" class="leftSideLabel">Data de vacinação</label>
-        <label for="vacina" class="leftSideLabel" >Vacina</label>
+        <label for="dataVacinacao" class="leftSideLabel"
+          >Data de vacinação</label
+        >
+        <label for="vacina" class="leftSideLabel">Vacina</label>
         <label class="leftSideLabel">Dose</label>
-        <label for="comprovante" class="leftSideLabel">Comprovante da vacina</label>
+        <label for="comprovante" class="leftSideLabel"
+          >Comprovante da vacina</label
+        >
         <label for="dataProxima" class="leftSideLabel">Próxima vacinação</label>
       </div>
 
@@ -31,21 +60,59 @@
         <input type="date" class="registerTextInput" id="dataVacinacao" />
         <input type="text" id="vacina" class="registerTextInput" />
         <div class="vaccineSelector">
-          <input type="radio" id="primeiraDose" name="vaccineInput" value="primeira" />
-          <label for="primeiraDose" class="registerTextInput rightSideLabel" >1ª dose</label>
-          <input type="radio" id="segundaDose" name="vaccineInput" value="segunda" />
-          <label for="segundaDose" class="registerTextInput rightSideLabel" >2ª dose</label>
-          <input type="radio" id="terceiraDose" name="vaccineInput" value="terceira" />
-          <label for="terceiraDose" class="registerTextInput rightSideLabel" >3ª dose</label>
-          <input type="radio" id="reforço" name="vaccineInput" value="reforço" />
-          <label for="reforço" class="registerTextInput rightSideLabel" >Reforço</label>
-          <input type="radio" id="unica" name="vaccineInput" value="dose única" />
-          <label for="unica" class="registerTextInput rightSideLabel" >Dose Única</label>
+          <input
+            type="radio"
+            id="primeiraDose"
+            name="vaccineInput"
+            value="primeira"
+          />
+          <label for="primeiraDose" class="registerTextInput rightSideLabel"
+            >1ª dose</label
+          >
+          <input
+            type="radio"
+            id="segundaDose"
+            name="vaccineInput"
+            value="segunda"
+          />
+          <label for="segundaDose" class="registerTextInput rightSideLabel"
+            >2ª dose</label
+          >
+          <input
+            type="radio"
+            id="terceiraDose"
+            name="vaccineInput"
+            value="terceira"
+          />
+          <label for="terceiraDose" class="registerTextInput rightSideLabel"
+            >3ª dose</label
+          >
+          <input
+            type="radio"
+            id="reforço"
+            name="vaccineInput"
+            value="reforço"
+          />
+          <label for="reforço" class="registerTextInput rightSideLabel"
+            >Reforço</label
+          >
+          <input
+            type="radio"
+            id="unica"
+            name="vaccineInput"
+            value="dose única"
+          />
+          <label for="unica" class="registerTextInput rightSideLabel"
+            >Dose Única</label
+          >
         </div>
         <input type="image" id="comprovante" class="registerTextInput" />
         <input type="date" id="dataProxima" class="registerTextInput" />
       </div>
     </form>
     <a href="./" class="button greenButton centralize">Cadastrar</a>
+    <span onclick="modal(true)" class="button redButton centralize"
+      >Excluir Vacina</span
+    >
   </main>
 </body>

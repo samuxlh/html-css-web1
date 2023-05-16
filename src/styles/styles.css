@@ -33,6 +33,10 @@ body {
   background-color: #37bd6d;
 }
 
+.redButton {
+  background-color: #f05555;
+}
+
 .blueText {
   color: #419ed7;
 }
