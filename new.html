@@ -23,6 +23,14 @@
                 popup.style.display = "none";
             }
         }
+        function cancelar() {
+            const currentAdress = window.location.href;
+            let mySplitStr = currentAdress.split("/");
+            mySplitStr[3] = "homepage.html";
+            console.log(mySplitStr);
+            const adrss = mySplitStr.join("/");
+            window.location.replace(adrss);
+        }
     </script>
 </head>
 
@@ -40,8 +48,13 @@
     <main>
         <div id="popupModal">
             <div class="popupInside">
-                <button onclick="modal(false)">Fechar modal</button>
-                <h1>Deseja mesmo excluir essa vacina?</h1>
+                <span class="popupTitle">Deseja cancelar a inserção dessa vacina?</span>
+                <div class="buttons">
+                    <button onclick="cancelar()" class="button redButton">Sim</button>
+                    <button onclick="modal(false)" class="button greenButton">
+                        Continuar editando
+                    </button>
+                </div>
             </div>
         </div>
         <div id="popupBg"></div>

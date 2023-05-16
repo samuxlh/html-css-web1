@@ -22,6 +22,16 @@
         popup.style.display = "none";
       }
     }
+
+    function excluir(){
+      alert('deve excluir a vacina atual')
+      const currentAdress = window.location.href;
+            let mySplitStr = currentAdress.split("/");
+            mySplitStr[3] = "homepage.html";
+            console.log(mySplitStr);
+            const adrss = mySplitStr.join("/");
+            window.location.replace(adrss);
+    }
   </script>
 </head>
 <body>
@@ -38,9 +48,14 @@
   <main>
     <div id="popupModal">
       <div class="popupInside">
-        <button onclick="modal(false)">Fechar modal</button>
-        <h1>Deseja mesmo excluir essa vacina?</h1>
-      </div>
+        <span class="popupTitle">Tem certeza que deseja remover essa vacina?</span>
+        <div class="buttons">
+            <button onclick="excluir()" class="button redButton">Sim</button>
+            <button onclick="modal(false)" class="button greenButton">
+                Cancelar
+            </button>
+        </div>
+    </div>
     </div>
     <div id="popupBg"></div>
     <form class="registerForm" id="myForm">

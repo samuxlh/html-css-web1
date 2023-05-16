@@ -87,3 +87,17 @@
     height: 0;
     background-color: rgba(43, 43, 43, 0.671);
   }
+
+  .popupInside{
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .popupTitle{
+    color: red;
+    font-size: 24px;
+    margin: 16px 0;
+  }
