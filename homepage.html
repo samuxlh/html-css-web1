@@ -30,16 +30,28 @@
       <div class="vaccineCard">
         <h2>Astrazeneca</h2>
         <p class="vaccineDose">1ª dose</p>
-        <p class="vaccineDate">31/12/2020</p>
+        <p class="vaccineDate">31/12/2020</p></a>
         <img
           src="https://storage.googleapis.com/afs-prod/media/4a0663b017d14bf0bfd90638f3fffb86/3000.jpeg"
           alt="Ampola de vacina para Covid-19 do tipo Astrazeneca"
         />
-        <p class="vaccineNextDose">Próxima dose em: 21/12/2023</p>
       </div>
     </div>
-    <a href="./vaccine.html" class="button greenButton centralize">
+    <a href="./new.html" class="button greenButton centralize">
       Nova vacina
     </a>
   </main>
+  <script>
+    const myElement = document.getElementsByClassName("vaccineCard");
+    myElement[0].addEventListener('click', function() {
+      console.log('Card clicado');
+      console.log(myElement);
+      const currentAdress = window.location.href
+      let mySplitStr = currentAdress.split('/')
+      mySplitStr[3] = "vaccine.html"
+      console.log(mySplitStr)
+      const adrss = mySplitStr.join("/");
+      window.location.replace(adrss)
+    });
+  </script>
 </body>
