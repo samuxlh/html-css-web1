@@ -1,41 +1,28 @@
 <!DOCTYPE html>
+
 <head>
-  <script>
-    function handleSubmit(){
-      const nome = document.getElementById('nome').value;
-      const nasc = document.getElementById('nasc').value;
-      const email = document.getElementById('email').value;
-      const pw = document.getElementById('pw').value;
-      let genderOption;
-      const selectedOption = document.querySelector('input[name="genderInput"]:checked');
-      if (selectedOption) {
-        genderOption = (selectedOption.value);
-        console.log(genderOption);
-      } else {
-        console.log('Gênero não selecionado');
-      }
-    const user = {nome, nasc, email, pw, genderOption};
-    console.log(user)
-    }
-  </script>
+  <script type="module" src="./src/scripts/register.js"></script>
   <link rel="stylesheet" href="./src/styles/reset.css" />
   <link rel="stylesheet" href="./src/styles/styles.css" />
   <link rel="stylesheet" href="./src/styles/register.css" />
   <title>Cadastro - MyHealth</title>
   <meta charset="utf-8" />
 </head>
+
 <body>
   <nav>
     <div class="logo">
       <img src="src/img/icon-vaccine.png" width="48" />
-      <a href='./' class="clean"><h1 class="myHealthLogo">My Health</h1></a>
+      <a href='./' class="clean">
+        <h1 class="myHealthLogo">My Health</h1>
+      </a>
     </div>
     <div class="buttonArea"></div>
   </nav>
   <main>
     <form class="registerForm" id="myForm">
       <div class="column">
-        <label for="nome" class="leftSideLabel" >Nome completo</label>
+        <label for="nome" class="leftSideLabel">Nome completo</label>
         <label class="leftSideLabel">Sexo</label>
         <label for="nasc" class="leftSideLabel">Data de nascimento</label>
         <label for="email" class="leftSideLabel">Email</label>
@@ -45,18 +32,17 @@
         <input type="text" id="nome" class="registerTextInput" />
         <div class="gender_selector">
           <input type="radio" id="masc" name="genderInput" value="Masculino" />
-          <label for="masc" class="registerTextInput rightSideLabel" >Masculino</label>
+          <label for="masc" class="registerTextInput rightSideLabel">Masculino</label>
           <input type="radio" id="fem" name="genderInput" value="Feminino" />
-          <label for="fem" class="registerTextInput rightSideLabel" >Feminino</label>
+          <label for="fem" class="registerTextInput rightSideLabel">Feminino</label>
         </div>
         <input type="date" class="registerTextInput" id="nasc" />
         <input type="email" id="email" class="registerTextInput" />
         <input type="password" id="pw" class="registerTextInput" />
       </div>
     </form>
-
-    <a class="button greenButton centralize" onclick="handleSubmit()"
-      >Cadastrar</a
-    >
+    <p id="alertMsg"></p>
+    <a class="button greenButton centralize" id='register'>Cadastrar</a>
   </main>
+
 </body>

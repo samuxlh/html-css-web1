@@ -59,3 +59,9 @@ label {
   all: unset;
   cursor: pointer;
 }
+
+#alertMsg {
+  margin: 1em auto;
+  color: red;
+  text-align: center;
+}
